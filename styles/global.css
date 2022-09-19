@@ -1,0 +1,18 @@
+:root {
+    --accent-color: #ef233c;
+    --bg-color: #2b2d42;
+    --secondary-bg-color: #8d99ae;
+    --primary-text-color: #edf2f4;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+html {
+    font-family: "Inter", sans-serif;
+}
+
+.special {
+    color: var(--accent-color);
+}
