@@ -10,9 +10,19 @@ body {
 }
 
 html {
+    font-size: 100%;
     font-family: "Inter", sans-serif;
 }
 
 .special {
     color: var(--accent-color);
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+section {
+    min-height: 80vh;
 }

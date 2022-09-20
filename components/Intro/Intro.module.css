@@ -1,5 +1,13 @@
-.left {
+.intro {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
 }
 
-.right {
+.intro_line {
+    font-size: 2.5rem;
+    /* margin-right: 1rem; */
+    color: var(--primary-text-color);
 }

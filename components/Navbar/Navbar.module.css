@@ -4,3 +4,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.nav_title {
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+}

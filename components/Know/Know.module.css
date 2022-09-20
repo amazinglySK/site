@@ -1,0 +1,11 @@
+.know_line {
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+}
+
+.langs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center;
+    gap: 0.5rem;
+}

@@ -1,0 +1,9 @@
+.button {
+    background-color: var(--accent-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    padding: 1rem;
+}
