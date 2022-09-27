@@ -11,3 +11,21 @@
     /* margin-right: 1rem; */
     color: var(--primary-text-color);
 }
+
+.pfp {
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 800px) {
+    .intro {
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .pfp {
+        width: 250px;
+        height: 250px;
+    }
+}

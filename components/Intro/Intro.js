@@ -3,7 +3,7 @@ import styles from "./Intro.module.css";
 export default function Intro() {
     return (
         <section className={styles.intro}>
-            <img src="/pfp.png" alt="" width={300} height={300} />
+            <img src="/pfp.png" alt="" className={styles.pfp} />
             <h3 className={styles.intro_line}>
                 Hey there 👋 ! I am Shashwat Krishna. A{" "}
                 <span className="special">high school </span> student,{" "}

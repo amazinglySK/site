@@ -26,3 +26,13 @@ html {
 section {
     min-height: 80vh;
 }
+
+@media (max-width: 800px) {
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        margin: 2rem 0;
+    }
+}

@@ -5,7 +5,13 @@
 
 .langs {
     display: grid;
+    margin-top: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-items: center;
-    gap: 0.5rem;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+}
+
+.image {
+    height: 125px;
 }

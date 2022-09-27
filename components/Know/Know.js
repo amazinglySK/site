@@ -7,10 +7,30 @@ export default function Know() {
                 Few <span className="special">things</span> I know
             </h3>
             <div className={styles.langs}>
-                <img src="/golang.png" alt="" height={150} />
-                <img src="/rust.png" alt="" height={150} />
-                <img src="/python.png" alt="" height={150} />
-                <img src="/javascript.png" alt="" height={150} />
+                <img
+                    src="/golang.png"
+                    alt="golang logo"
+                    className={styles.image}
+                    // height={150}
+                />
+                <img
+                    src="/rust.png"
+                    alt="rustlang logo"
+                    className={styles.image}
+                    // height={150}
+                />
+                <img
+                    src="/python.png"
+                    alt="python logo"
+                    className={styles.image}
+                    // height={150}
+                />
+                <img
+                    src="/javascript.png"
+                    alt="javascript logo"
+                    className={styles.image}
+                    // height={150}
+                />
             </div>
         </section>
     );
