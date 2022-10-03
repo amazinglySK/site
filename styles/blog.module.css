@@ -1,0 +1,11 @@
+.date {
+    color: var(--accent-color);
+}
+
+.content {
+    font-size: 1.5rem;
+}
+
+.post {
+    color: var(--primary-text-color);
+}
