@@ -1,18 +1,11 @@
-.post {
-    font-family: "Inter", sans-serif;
-    color: var(--primary-text-color);
-    padding: 0.5rem 1rem;
-    transition: all ease-in-out 0.25s;
-}
-
-.post:hover {
-    background-color: rgba(245, 245, 245, 0.5);
-}
-
 .date {
     color: var(--accent-color);
 }
 
-.desc {
-    font-size: 1.25rem;
+.title {
+    color: var(--primary-text-color);
+}
+
+.content {
+    color: var(--primary-text-color);
 }

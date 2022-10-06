@@ -1,55 +1,40 @@
-import Post from "@components/Post/Post";
+import PostCard from "@components/PostCard/PostCard";
 import Navbar from "@components/Navbar/Navbar";
 import { useEffect, useState } from "react";
-// import styles from "@styles/blog.module.css";
-import axios from "axios";
-
-async function GetPosts() {
-    return [
-        {
-            title: "Hello",
-            desc: "Checkin' out",
-            date: "23/02/2007",
-            link: "1234",
-            key: "abcd123",
-        },
-        {
-            title: "Hello",
-            desc: "Checkin' out",
-            date: "23/02/2007",
-            link: "1234",
-            key: "320cd#",
-        },
-    ];
-}
+import { GetPosts } from "lib/Contentful";
+import Loader from "@components/Loader/Loader";
 
 export default function Blog() {
-    let [isLoaded, setLoaded] = useState(false);
+    let [isLoaded, setLoaded] = useState(true);
     let [data, setData] = useState([]);
 
     useEffect(() => {
-        GetPosts().then((posts) => {
-            setData(posts);
-            setLoaded(true);
-        });
+        setLoaded(false);
+        GetPosts(0)
+            .then((posts) => {
+                console.log(posts);
+                setData(posts);
+            })
+            .finally(setLoaded(true));
     }, []);
 
+    if (!isLoaded) return <Loader />;
     return (
         <>
             <Navbar></Navbar>
             <div className="container">
-                {isLoaded &&
-                    data.map((post) => {
-                        return (
-                            <Post
-                                title={post.title}
-                                desc={post.desc}
-                                date={post.date}
-                                link={post.link}
-                                key={post.key}
-                            ></Post>
-                        );
-                    })}
+                {data.map((post) => {
+                    let date = new Date(post.fields.createdAt);
+                    return (
+                        <PostCard
+                            title={post.fields.title}
+                            desc={post.fields.desc}
+                            date={date.toLocaleDateString("en-gb")}
+                            link={post.fields.slug}
+                            id={post.sys.id}
+                        />
+                    );
+                })}
             </div>
         </>
     );
