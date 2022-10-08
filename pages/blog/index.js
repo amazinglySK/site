@@ -1,7 +1,7 @@
 import PostCard from "@components/PostCard/PostCard";
 import Navbar from "@components/Navbar/Navbar";
 import { useEffect, useState } from "react";
-import { GetPosts } from "lib/Contentful";
+import { GetPosts } from "@contentful/postHandlers";
 import Loader from "@components/Loader/Loader";
 
 export default function Blog() {
