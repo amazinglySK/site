@@ -1,17 +1,9 @@
-import Navbar from "@components/Navbar/Navbar";
-import Intro from "@components/Intro/Intro";
-import Know from "@components/Know/Know";
-import Invite from "@components/Invite/Invite";
+import HomePage from "@components/Home/Home";
 
 export default function Home() {
     return (
         <div className="container">
-            <Navbar />
-            <main>
-                <Intro />
-                <Know />
-                <Invite></Invite>
-            </main>
+            <HomePage />
         </div>
     );
 }

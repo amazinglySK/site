@@ -1,13 +1,13 @@
 import styles from "./PostCard.module.css";
 
-export default function PostCard({ title, desc, date, link }) {
+export default function PostCard({ readingTime, title, desc, link }) {
     return (
         <>
-            <a href={`/blog/${link}`} target="_blank">
-                <div className={styles.post}>
-                    <h2 className={styles.date}>{date}</h2>
+            <a href={`/blog/${link}`}>
+                <div className={styles.card}>
+                    <p className={styles.reading_time}>{readingTime} min</p>
                     <h1 className={styles.title}>{title}</h1>
-                    <p className={styles.desc}>{desc}</p>
+                    <p className={styles.description}>{desc}</p>
                 </div>
             </a>
         </>

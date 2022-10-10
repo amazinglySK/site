@@ -1,9 +1,0 @@
-.button {
-    background-color: var(--accent-color);
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--primary-text-color);
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
-    padding: 1rem;
-}

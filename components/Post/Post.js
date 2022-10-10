@@ -1,6 +1,5 @@
 import styles from "./Post.module.css";
 import { useEffect, useState } from "react";
-import Loader from "@components/Loader/Loader";
 import { GetAPost } from "@contentful/postHandlers";
 
 export default function Post() {
@@ -19,7 +18,7 @@ export default function Post() {
 
     let format_date = new Date(data.fields.createdAt);
 
-    if (!isLoaded) return <Loader />;
+    if (!isLoaded) return <div>Loading...</div>;
 
     return (
         <>

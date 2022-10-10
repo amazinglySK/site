@@ -1,0 +1,40 @@
+.split_container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1em;
+}
+
+.left_container {
+    width: 60%;
+}
+
+.right_container {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pfp_image {
+    width: 250px;
+    height: 250px;
+}
+
+.link_container {
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.link_container > a {
+    font-size: 1.5rem;
+}
+
+.list {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+}

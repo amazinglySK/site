@@ -1,8 +1,8 @@
 :root {
-    --accent-color: #ef233c;
-    --bg-color: #2b2d42;
+    --accent-color: #bc6ff1;
+    --bg-color: #181818;
     --secondary-bg-color: #8d99ae;
-    --primary-text-color: #edf2f4;
+    --primary-text-color: #eeeeee;
 }
 
 body {
@@ -12,11 +12,20 @@ body {
 html {
     font-size: 100%;
     font-family: "Josefin Sans", sans-serif;
+    color: #eeeeee;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--accent-color);
 }
 
 .special {
@@ -30,6 +39,15 @@ a {
 
 section {
     min-height: 80vh;
+}
+
+.post-page-title {
+    color: var(--accent-color);
+    font-size: 3rem;
+}
+
+.post-page {
+    margin-top: 5%;
 }
 
 @media (max-width: 800px) {

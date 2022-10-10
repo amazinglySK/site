@@ -1,8 +1,6 @@
 import PostCard from "@components/PostCard/PostCard";
-import Navbar from "@components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { GetPosts } from "@contentful/postHandlers";
-import Loader from "@components/Loader/Loader";
 
 export default function Blog() {
     let [isLoaded, setLoaded] = useState(true);
@@ -18,18 +16,17 @@ export default function Blog() {
             .finally(setLoaded(true));
     }, []);
 
-    if (!isLoaded) return <Loader />;
+    if (!isLoaded) return <div>Loading...</div>;
     return (
         <>
-            <Navbar></Navbar>
             <div className="container">
+                <h1 className="post-page-title">stylus (/ˈstʌɪləs/) : 🖋️</h1>
                 {data.map((post) => {
-                    let date = new Date(post.fields.createdAt);
                     return (
                         <PostCard
                             title={post.fields.title}
                             desc={post.fields.desc}
-                            date={date.toLocaleDateString("en-gb")}
+                            readingTime={post.fields.readingTime}
                             link={post.fields.slug}
                             id={post.sys.id}
                         />

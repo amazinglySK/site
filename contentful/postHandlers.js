@@ -10,7 +10,7 @@ export let GetPosts = async (current_iter) => {
     let skipCount = Number(skip * current_iter);
     let res = await client.getEntries({
         content_type: "post",
-        select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug",
+        select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug,fields.readingTime",
         skip: skipCount,
         limit: skip,
     });
