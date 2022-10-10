@@ -9,3 +9,19 @@
 .content {
     color: var(--primary-text-color);
 }
+
+.content > h1 {
+    font-size: 1.5rem;
+}
+
+.content > h2 {
+    font-size: 1.25rem;
+}
+
+.content > p {
+    font-size: 1.1rem;
+}
+
+.content > ol li {
+    line-height: 1.5rem;
+}

@@ -10,7 +10,6 @@ export default function Blog() {
         setLoaded(false);
         GetPosts(0)
             .then((posts) => {
-                console.log(posts);
                 setData(posts);
             })
             .finally(setLoaded(true));

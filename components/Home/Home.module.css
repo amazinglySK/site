@@ -38,3 +38,19 @@
     font-size: 1.25rem;
     line-height: 1.5em;
 }
+
+@media (max-width: 800px) {
+    .split_container {
+        flex-direction: column-reverse;
+    }
+
+    .pfp_image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .right_container,
+    .left_container {
+        width: 100%;
+    }
+}

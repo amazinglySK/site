@@ -6,13 +6,13 @@ const client = contentful.createClient({
 });
 
 export let GetPosts = async (current_iter) => {
-    const skip = 5;
-    let skipCount = Number(skip * current_iter);
+    const lim = 5;
+    let skipCount = Number(lim * current_iter);
     let res = await client.getEntries({
         content_type: "post",
         select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug,fields.readingTime",
         skip: skipCount,
-        limit: skip,
+        limit: lim,
     });
     return res.items;
 };
@@ -20,8 +20,13 @@ export let GetPosts = async (current_iter) => {
 export let GetAPost = async (slug) => {
     let res = await client.getEntries({
         content_type: "post",
-        select: "fields.title,fields.content,fields.createdAt",
+        select: "fields.title,fields.content,fields.createdAt,fields.slug",
         "fields.slug": slug,
     });
+    for (const i of res.items) {
+        if (i.fields.slug === slug) {
+            return i;
+        }
+    }
     return res.items[0];
 };

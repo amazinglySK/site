@@ -1,24 +1,31 @@
 import styles from "./Post.module.css";
 import { useEffect, useState } from "react";
 import { GetAPost } from "@contentful/postHandlers";
+import { remark } from "remark";
+import html from "remark-html";
 
 export default function Post() {
     let [isLoaded, setLoaded] = useState(true);
     let [data, setData] = useState({ fields: {} });
-
+    let [content, setContent] = useState("");
     useEffect(() => {
-        let slug = window.location.pathname.match(/[^\/]+/g).at(-1);
         setLoaded(false);
-        console.log(slug);
+        let slug = window.location.pathname.match(/[^\/]+/g).at(-1);
         GetAPost(slug).then((d) => {
             setLoaded(true);
             setData(d);
+            remark()
+                .use(html)
+                .process(d.fields.content)
+                .then((result) => {
+                    setContent(result.toString());
+                });
         });
     }, []);
 
     let format_date = new Date(data.fields.createdAt);
 
-    if (!isLoaded) return <div>Loading...</div>;
+    if (!isLoaded || !content) return <div>Loading...</div>;
 
     return (
         <>
@@ -26,7 +33,10 @@ export default function Post() {
                 {format_date.toLocaleDateString("en-gb")}
             </h1>
             <h1 className={styles.title}>{data.fields.title}</h1>
-            <p className={styles.content}>{data.fields.content}</p>
+            <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{ __html: content }}
+            ></div>
         </>
     );
 }
