@@ -5,13 +5,11 @@ const client = contentful.createClient({
     accessToken: process.env["NEXT_PUBLIC_CONTENTFUL_API_TOKEN"],
 });
 
-export let GetPosts = async (current_iter) => {
+export let GetPosts = async () => {
     const lim = 5;
-    let skipCount = Number(lim * current_iter);
     let res = await client.getEntries({
         content_type: "post",
         select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug,fields.readingTime",
-        skip: skipCount,
         limit: lim,
     });
     return res.items;
@@ -29,4 +27,12 @@ export let GetAPost = async (slug) => {
         }
     }
     return res.items[0];
+};
+
+export let GetAllPosts = async () => {
+    let res = await client.getEntries({
+        content_type: "post",
+        select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug,fields.readingTime",
+    });
+    return res.items;
 };

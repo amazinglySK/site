@@ -9,6 +9,7 @@ export default function PostCard({ readingTime, title, desc, link }) {
                     <h1 className={styles.title}>{title}</h1>
                     <p className={styles.description}>{desc}</p>
                 </div>
+                <hr />
             </a>
         </>
     );

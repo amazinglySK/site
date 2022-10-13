@@ -8,8 +8,9 @@ export default function Blog() {
 
     useEffect(() => {
         setLoaded(false);
-        GetPosts(0)
+        GetPosts()
             .then((posts) => {
+                console.log(posts);
                 setData(posts);
             })
             .finally(setLoaded(true));
@@ -19,6 +20,7 @@ export default function Blog() {
     return (
         <>
             <div className="container">
+                <a href="/">Back to the portfolio</a>
                 <h1 className="post-page-title">stylus (/ˈstʌɪləs/) : 🖋️</h1>
                 {data.map((post) => {
                     return (
