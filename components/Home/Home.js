@@ -29,7 +29,7 @@ export default function HomePage() {
             <div className={styles.right_container}>
                 <img className={styles.pfp_image} src="/pfp.png" />
                 <div className={styles.link_container}>
-                    <a href="https://fiverr.com">FIVERR</a>
+                    <a href="https://www.polywork.com/amazinglysk">POLYWORK</a>
                     <a href="https://github.com/amazinglySK">GITHUB</a>
                 </div>
             </div>
