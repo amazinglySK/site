@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import Link from "next/link";
 
 export default function HomePage() {
     return (
@@ -16,7 +17,7 @@ export default function HomePage() {
                     <li>🤝 Freelance coder</li>
                 </ul>
                 <p>
-                    Checkout my blog : <a href="/blog">stylus</a>
+                    Checkout my blog : <Link href="/blog">stylus</Link>
                 </p>
                 <p>Feel free to contact me for any project ideas/discussion</p>
                 <p>
@@ -29,8 +30,15 @@ export default function HomePage() {
             <div className={styles.right_container}>
                 <img className={styles.pfp_image} src="/pfp.png" />
                 <div className={styles.link_container}>
-                    <a href="https://www.polywork.com/amazinglysk">POLYWORK</a>
-                    <a href="https://github.com/amazinglySK">GITHUB</a>
+                    <a
+                        href="https://www.polywork.com/amazinglysk"
+                        target={"_blank"}
+                    >
+                        POLYWORK
+                    </a>
+                    <a href="https://github.com/amazinglySK" target={"_blank"}>
+                        GITHUB
+                    </a>
                 </div>
             </div>
         </div>

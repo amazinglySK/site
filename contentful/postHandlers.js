@@ -9,10 +9,22 @@ export let GetPosts = async () => {
     const lim = 5;
     let res = await client.getEntries({
         content_type: "post",
-        select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug,fields.readingTime",
+        select: "sys.id,fields.title,fields.desc,fields.createdAt,fields.slug,fields.readingTime,metadata.tags",
         limit: lim,
     });
-    return res.items;
+
+    let resEd = await Promise.all(
+        res.items.map(async (it) => {
+            it = { ...it, tags: [] };
+            for (const j of it.metadata.tags) {
+                let { name } = await client.getTag(j.sys.id);
+                it.tags.push(name);
+            }
+            return it;
+        })
+    );
+
+    return resEd;
 };
 
 export let GetAPost = async (slug) => {

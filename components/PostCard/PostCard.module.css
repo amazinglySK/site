@@ -10,3 +10,20 @@
 .reading_time {
     color: var(--accent-color);
 }
+
+.tags {
+    display: block;
+    color: var(--accent-color);
+}
+
+.tags > span {
+    margin-right: 1em;
+}
+
+.card > hr {
+    color: var(--accent-color);
+}
+
+.card:hover {
+    text-decoration: underline;
+}

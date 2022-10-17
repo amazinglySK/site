@@ -8,6 +8,7 @@
 
 .content {
     color: var(--primary-text-color);
+    line-height: 1.5rem;
 }
 
 .content > h1 {
@@ -19,7 +20,7 @@
 }
 
 .content > p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .content > ol li {

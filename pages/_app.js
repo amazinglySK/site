@@ -5,7 +5,6 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>amazinglySK</title>
                 <link rel="icon" href="/favicon.png" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link

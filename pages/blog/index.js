@@ -1,5 +1,7 @@
 import PostCard from "@components/PostCard/PostCard";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
 import { GetPosts } from "@contentful/postHandlers";
 
 export default function Blog() {
@@ -10,7 +12,6 @@ export default function Blog() {
         setLoaded(false);
         GetPosts()
             .then((posts) => {
-                console.log(posts);
                 setData(posts);
             })
             .finally(setLoaded(true));
@@ -19,8 +20,11 @@ export default function Blog() {
     if (!isLoaded) return <div>Loading...</div>;
     return (
         <>
+            <Head>
+                <title>stylus | amazinglySK</title>
+            </Head>
             <div className="container">
-                <a href="/">Back to the portfolio</a>
+                <Link href="/">Back to the portfolio</Link>
                 <h1 className="post-page-title">stylus (/ˈstʌɪləs/) : 🖋️</h1>
                 {data.map((post) => {
                     return (
@@ -29,7 +33,8 @@ export default function Blog() {
                             desc={post.fields.desc}
                             readingTime={post.fields.readingTime}
                             link={post.fields.slug}
-                            id={post.sys.id}
+                            tags={post.tags}
+                            key={post.sys.id}
                         />
                     );
                 })}
