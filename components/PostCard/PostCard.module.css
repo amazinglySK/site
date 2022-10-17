@@ -24,6 +24,10 @@
     color: var(--accent-color);
 }
 
+.card {
+    cursor: pointer;
+}
+
 .card:hover {
     text-decoration: underline;
 }
