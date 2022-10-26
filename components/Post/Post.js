@@ -23,15 +23,10 @@ export default function Post() {
         });
     }, []);
 
-    let format_date = new Date(data.fields.createdAt);
-
     if (!isLoaded || !content) return <div>Loading...</div>;
 
     return (
         <>
-            <h1 className={styles.date}>
-                {format_date.toLocaleDateString("en-gb")}
-            </h1>
             <h1 className={styles.title}>{data.fields.title}</h1>
             <div
                 className={styles.content}

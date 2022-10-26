@@ -41,13 +41,13 @@ section {
     min-height: 80vh;
 }
 
+.post-page {
+    margin-top: 5%;
+}
+
 .post-page-title {
     color: var(--accent-color);
     font-size: 3rem;
-}
-
-.post-page {
-    margin-top: 5%;
 }
 
 @media (max-width: 800px) {
