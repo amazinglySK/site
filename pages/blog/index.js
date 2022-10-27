@@ -1,5 +1,6 @@
 import Head from "next/head";
 import PostHome from "@components/PostHome/PostHome";
+import Footer from "@components/Footer/Footer";
 import Link from "next/link";
 
 export default function Blog() {
@@ -13,6 +14,7 @@ export default function Blog() {
                 <h1 className="post-page-title">stylus (/ˈstʌɪləs/) : 🖋️</h1>
                 <PostHome />
             </div>
+            <Footer></Footer>
         </>
     );
 }

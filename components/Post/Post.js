@@ -2,6 +2,7 @@ import styles from "./Post.module.css";
 import { useEffect, useState } from "react";
 import { GetAPost } from "@contentful/postHandlers";
 import { remark } from "remark";
+import Footer from "../Footer/Footer";
 import html from "remark-html";
 
 export default function Post() {
@@ -32,6 +33,7 @@ export default function Post() {
                 className={styles.content}
                 dangerouslySetInnerHTML={{ __html: content }}
             ></div>
+            <Footer></Footer>
         </>
     );
 }

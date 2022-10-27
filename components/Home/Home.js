@@ -1,5 +1,6 @@
 import styles from "./Home.module.css";
 import Link from "next/link";
+import Footer from "../Footer/Footer";
 
 export default function HomePage() {
     return (
