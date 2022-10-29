@@ -15,7 +15,7 @@ export default function PostCard({ readingTime, title, desc, link, tags }) {
                         return <span key={i}>{t}</span>;
                     })}
                 </div>
-                <hr />
+                <hr className={styles.div_line} />
             </div>
         </Link>
     );

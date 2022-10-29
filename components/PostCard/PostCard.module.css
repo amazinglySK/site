@@ -21,7 +21,8 @@
     cursor: pointer;
 }
 
-.card > hr {
+.div_line {
+    margin: 2rem 0;
     color: var(--accent-color);
 }
 

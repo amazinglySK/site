@@ -9,11 +9,15 @@ export default function Blog() {
             <Head>
                 <title>stylus | amazinglySK</title>
             </Head>
-            <div className="container">
-                <Link href="/">Back to the portfolio</Link>
-                <h1 className="post-page-title">stylus (/ˈstʌɪləs/) : 🖋️</h1>
-                <PostHome />
-            </div>
+            <main>
+                <div className="container">
+                    <Link href="/">Back to the portfolio</Link>
+                    <h1 className="post-page-title">
+                        stylus (/ˈstʌɪləs/) : 🖋️
+                    </h1>
+                    <PostHome />
+                </div>
+            </main>
             <Footer></Footer>
         </>
     );

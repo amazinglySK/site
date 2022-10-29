@@ -8,10 +8,12 @@ export default function Home() {
             <Head>
                 <title>amazinglySK</title>
             </Head>
-            <div className="container">
-                <HomePage />
-            </div>
-            <Footer></Footer>
+            <main>
+                <div className="container">
+                    <HomePage />
+                </div>
+                <Footer></Footer>
+            </main>
         </>
     );
 }

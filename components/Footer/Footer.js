@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <div className={styles.footer}>
             <span>
-                This website was made with 💖 by{" "}
+                Made with 💖 by{" "}
                 <a href="https://github.com/amazinglysk">amazinglysk</a>
             </span>
             <span>&copy; Shashwat Krishna {year}</span>
