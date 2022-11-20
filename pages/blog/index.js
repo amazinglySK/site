@@ -17,8 +17,8 @@ export default function Blog() {
                     </h1>
                     <PostHome />
                 </div>
-            </main>
             <Footer></Footer>
+            </main>
         </>
     );
 }

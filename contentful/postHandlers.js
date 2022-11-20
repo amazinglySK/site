@@ -10,6 +10,7 @@ export let GetPosts = async () => {
     let res = await client.getEntries({
         content_type: "post",
         select: "sys.id,fields.title,fields.desc,fields.slug,fields.readingTime,metadata.tags",
+        order : "-sys.createdAt",
         limit: lim,
     });
 
