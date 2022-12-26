@@ -1,3 +1,3 @@
 export let AppConfig = {
-    postsPerLoad : 2,
+    postsPerLoad : 3,
 }
