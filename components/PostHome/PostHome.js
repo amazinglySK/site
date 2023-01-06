@@ -12,7 +12,7 @@ export default function PostHome() {
 
     function LoadMorePosts() {
         setLoaded(false)
-        GetPosts(iter).then(([posts, more]) => {
+        GetPosts(iter, c_tags).then(([posts, more]) => {
             setLoaded(true);
             setData(d => [...d, ...posts])
             setIter(iter + 1)
@@ -22,18 +22,17 @@ export default function PostHome() {
 
     useEffect(() => {
         setLoaded(false);
-        GetPosts(iter).then(([posts, more]) => {
+        GetPosts(iter, tags).then(([posts, more]) => {
             setLoaded(true);
             setData(posts);
             setIter(iter + 1)
             setMore(more)
         });
     }, []);
-
-    if (!isLoaded) return <div>Loading...</div>;
+    
     return (
         <>
-            {data.map((post) => {
+            {data && data.map((post) => {
                 return (
                     <PostCard
                         title={post.fields.title}
@@ -45,7 +44,8 @@ export default function PostHome() {
                     />
                 );
             })}
-            {isMore && <button className = {styles.loadMore} onClick = {LoadMorePosts} >Load More Posts</button>}
+            {!isLoaded &&  <div>Loading...</div>}
+            {isMore && isLoaded && <button className = {styles.loadMore} onClick = {LoadMorePosts} >Load More Posts</button>}
         </>
     );
 }

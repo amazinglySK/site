@@ -9,7 +9,7 @@ export default function PostPage() {
                 <title>post | amazinglySK</title>
             </Head>
             <div className="container post-page">
-                <Link href="/blog/">Back to the blog</Link>
+                <Link href = "/blog/">Back to the blog</Link>
                 <Post />
             </div>
         </>
