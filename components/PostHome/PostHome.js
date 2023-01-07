@@ -12,7 +12,7 @@ export default function PostHome() {
 
     function LoadMorePosts() {
         setLoaded(false)
-        GetPosts(iter, c_tags).then(([posts, more]) => {
+        GetPosts(iter).then(([posts, more]) => {
             setLoaded(true);
             setData(d => [...d, ...posts])
             setIter(iter + 1)
@@ -22,7 +22,7 @@ export default function PostHome() {
 
     useEffect(() => {
         setLoaded(false);
-        GetPosts(iter, tags).then(([posts, more]) => {
+        GetPosts(iter).then(([posts, more]) => {
             setLoaded(true);
             setData(posts);
             setIter(iter + 1)
