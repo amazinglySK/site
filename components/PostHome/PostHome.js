@@ -22,13 +22,29 @@ export default function PostHome() {
 
     useEffect(() => {
         setLoaded(false);
-        GetPosts(iter).then(([posts, more]) => {
+        let d = JSON.parse(sessionStorage.getItem("data"))
+        if (d) {
+            let i= parseInt(sessionStorage.getItem("iter"))
+            let more = sessionStorage.getItem("isMore") == "true"
             setLoaded(true);
-            setData(posts);
-            setIter(iter + 1)
+            setData(d);
+            setIter(i)
             setMore(more)
-        });
+        }else{
+            GetPosts(iter).then(([posts, more]) => {
+                setLoaded(true);
+                setData(posts);
+                setIter(iter + 1)
+                setMore(more)
+            });
+        }
     }, []);
+
+    useEffect(() => {
+        sessionStorage.setItem("data", JSON.stringify(data))
+        sessionStorage.setItem("iter", iter)
+        sessionStorage.setItem("isMore", isMore)
+    }, [data, isMore, iter])
     
     return (
         <>
