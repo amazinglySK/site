@@ -44,3 +44,8 @@
     max-width: 80%;
     max-height: 300px;
 }
+
+.update { 
+    font-size: 0.9rem;
+    font-style: italic;
+}

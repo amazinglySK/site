@@ -45,14 +45,11 @@ export let GetPosts = async (iter) => {
 export let GetAPost = async (slug) => {
     let res = await client.getEntries({
         content_type: "post",
-        select: "fields.title,fields.content,fields.slug",
+        select: "fields.title,fields.content,fields.slug,sys.createdAt,sys.updatedAt",
         "fields.slug": slug,
     });
-    for (const i of res.items) {
-        if (i.fields.slug === slug) {
-            return i;
-        }
-    }
+    res.items[0].sys.createdAt = new Date(res.items[0].sys.createdAt)
+    res.items[0].sys.updatedAt = new Date(res.items[0].sys.updatedAt)
     return res.items[0];
 };
 

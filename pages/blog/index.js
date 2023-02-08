@@ -10,7 +10,7 @@ export default function Blog() {
                 <title>stylus | amazinglySK</title>
             </Head>
             <main>
-                <div className="container">
+                <div className="container post-home">
                     <Link href="/">Back to the portfolio</Link>
                     <h1 className="post-page-title">
                         stylus (/ˈstʌɪləs/) : 🖋️

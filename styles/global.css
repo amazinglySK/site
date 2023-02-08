@@ -47,6 +47,10 @@ main {
     /* margin: 2rem auto; */
 }
 
+.post-home {
+    margin-top: 1rem;
+}
+
 .post-page-title {
     color: var(--accent-color);
     font-size: 3rem;

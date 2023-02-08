@@ -28,11 +28,13 @@ export default function Post() {
 
     return (
         <>
+            <h2 className={styles.date}>{data.sys.createdAt.toDateString()}</h2>
             <h1 className={styles.title}>{data.fields.title}</h1>
             <div
                 className={styles.content}
                 dangerouslySetInnerHTML={{ __html: content }}
             ></div>
+            <p className = {styles.update}>Last updated on {data.sys.updatedAt.toDateString()}</p>
             <Footer></Footer>
         </>
     );
