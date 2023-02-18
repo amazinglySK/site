@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }) {
                 <meta property="twitter:url" content="https://amazinglysk.netlify.app"/>
                 <meta name="twitter:title" content="amazinglySK"/>
                 <meta name="twitter:description" content="amazinglysk's website 🌐!"/>
+                <meta name="google-site-verification" content="3rvFdWCNXsKUzbaP0vAkBdaZPdkdIzO_PKry2ElJBW8" />
                 <meta name="twitter:image" content="/og_img.png"/>
             </Head>
             <Component {...pageProps} />
