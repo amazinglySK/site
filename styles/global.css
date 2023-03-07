@@ -48,6 +48,7 @@ main {
 }
 
 .post-home {
+    width: 65%;
     margin-top: 1rem;
 }
 
@@ -59,10 +60,15 @@ main {
 
 .post-page {
     margin: 1rem auto;
+    width: 65%;
 }
 
 @media (max-width : 850px) {
     html {
         font-size: 95%;
+    }
+
+    .post-home, .post-page{
+        width: 80%;
     }
 }
