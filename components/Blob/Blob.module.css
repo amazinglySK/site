@@ -20,20 +20,19 @@
     height: 100%;
     width: 100vw;
     z-index: 2;
-    backdrop-filter: blur(20vmax);
+    backdrop-filter: blur(10vmax);
 }
 
 @keyframes rotate {
     from {
-      rotate: 0deg;
+        rotate: 0deg;
     }
-    
+
     50% {
-      scale: 1 1.5;
+        scale: 1 1.5;
     }
-    
+
     to {
-      rotate: 360deg;
+        rotate: 360deg;
     }
-  }
-  
+}
