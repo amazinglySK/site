@@ -49,5 +49,6 @@ export async function getStaticProps({ params }) {
             updated: updatedAt.toDateString(),
             content: str_content,
         },
+        revalidate: 30,
     };
 }
