@@ -3,7 +3,7 @@ import styles from "./PostCard.module.css";
 
 export default function PostCard({ readingTime, title, desc, link, tags }) {
     return (
-        <Link href={`/blog/${link}`}>
+        <Link href={`/blog/${link}`} shallow={true}>
             <div>
                 <div className={styles.card}>
                     <p className={styles.reading_time}>{readingTime} min</p>
