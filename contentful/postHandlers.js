@@ -15,12 +15,18 @@ export let LoadAllTags = async () => {
     return reduced;
 };
 
+let calcReadingTime = (wordCount) => {
+    const average_wpm = 200;
+    let readingTime = Math.ceil(wordCount / average_wpm);
+    return readingTime;
+};
+
 export let GetPosts = async (iter) => {
     const lim = AppConfig.postsPerLoad;
     const skipCount = iter * lim;
     let res = await client.getEntries({
         content_type: "post",
-        select: "sys.id,fields.title,fields.desc,fields.slug,fields.readingTime,metadata.tags",
+        select: "sys.id,fields.title,fields.desc,fields.slug,fields.readingTime,metadata.tags,fields.content",
         order: "-sys.createdAt",
         limit: lim,
         skip: skipCount,
@@ -33,6 +39,9 @@ export let GetPosts = async (iter) => {
                 let { name } = await client.getTag(j.sys.id);
                 it.tags.push(name);
             }
+            it.fields.readingTime = calcReadingTime(
+                it.fields.content.split(" ").length
+            );
             return it;
         })
     );
