@@ -16,7 +16,7 @@ export default function HomePage() {
                         <Link href="https://msu.edu" target="_blank">
                             MSU
                         </Link>{" "}
-                        (Go Green!)``
+                        (Go Green!)
                     </li>
                     <li>🧑‍💻 Coding enthusiast</li>
                     <li>🏓🏸 Plays badminton and table tennis</li>
