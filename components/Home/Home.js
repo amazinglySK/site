@@ -11,9 +11,16 @@ export default function HomePage() {
                 <p>Who am I ?</p>
                 <ul className={styles.list}>
                     <li>📍 Sharjah, UAE (Indian from 💖)</li>
-                    <li>🧑‍🎓 High school student (a tech & science nerd)</li>
+                    <li>
+                        🧑‍🎓 CS Freshman at{" "}
+                        <Link href="https://msu.edu" target="_blank">
+                            MSU
+                        </Link>{" "}
+                        (Go Green!)``
+                    </li>
                     <li>🧑‍💻 Coding enthusiast</li>
-                    <li>🏓 Table tennis player</li>
+                    <li>🏓🏸 Plays badminton and table tennis</li>
+                    <li>🎾 Loves watching tennis</li>
                     <li>🤝 Freelance coder</li>
                 </ul>
                 <p>
@@ -24,7 +31,8 @@ export default function HomePage() {
                     Email me at :{" "}
                     <a href="mailto:amazinglyskbiz@gmail.com">
                         amazinglyskbiz@gmail.com
-                    </a>
+                    </a>{" "}
+                    (That's my spam. I might not respond)
                 </p>
             </div>
             <div className={styles.right_container}>
