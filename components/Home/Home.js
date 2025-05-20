@@ -26,6 +26,7 @@ export default function HomePage() {
                 <p>
                     Checkout my blog : <Link href="/blog">stylus</Link>
                 </p>
+				
                 <p>Feel free to contact me for any project ideas/discussion</p>
                 <p>
                     Email me at :{" "}
@@ -38,14 +39,11 @@ export default function HomePage() {
             <div className={styles.right_container}>
                 <img className={styles.pfp_image} src="/pfp.png" />
                 <div className={styles.link_container}>
-                    <a
-                        href="https://www.polywork.com/amazinglysk"
-                        target={"_blank"}
-                    >
-                        POLYWORK
-                    </a>
                     <a href="https://github.com/amazinglySK" target={"_blank"}>
                         GITHUB
+                    </a>
+                    <a href="/resume.pdf" target={"_blank"}>
+                        RESUME
                     </a>
                 </div>
             </div>
