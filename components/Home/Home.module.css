@@ -19,6 +19,8 @@
 .pfp_image {
     width: 250px;
     height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .link_container {
@@ -39,14 +41,29 @@
     line-height: 1.5em;
 }
 
+.quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin: 1.5em 0;
+    padding-left: 1.5em;
+    border-left: 4px solid var(--accent-color, #6366f1);
+    color: #888;
+    line-height: 1.6em;
+}
+.quote strong {
+    color: #ffd740;
+    font-weight: 600;
+}
 @media (max-width : 850px) {
     .split_container {
         flex-direction: column-reverse;
     }
 
     .pfp_image {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     .right_container,

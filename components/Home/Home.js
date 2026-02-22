@@ -8,36 +8,38 @@ export default function HomePage() {
                 <h1>
                     Hey I am <span className="special">Shashwat</span> !
                 </h1>
-                <p>Who am I ?</p>
                 <ul className={styles.list}>
-                    <li>📍 Sharjah, UAE (Indian from 💖)</li>
+                    <li>📍 East Lansing, MI</li>
                     <li>
-                        🧑‍🎓 CS Freshman at{" "}
+                        🧑‍🎓 CS & Math major at{" "}
                         <Link href="https://msu.edu" target="_blank">
                             MSU
                         </Link>{" "}
                         (Go Green!)
                     </li>
-                    <li>🧑‍💻 Coding enthusiast</li>
-                    <li>🏓🏸 Plays badminton and table tennis</li>
-                    <li>🎾 Loves watching tennis</li>
-                    <li>🤝 Freelance coder</li>
+                    <li>🤝 Freelance developer</li>
                 </ul>
+                <blockquote className={styles.quote}>
+                    "First part of your life you <strong>learn</strong>; second part of your life you <strong>earn</strong>; third part of your life you <strong>return</strong>."
+                    <br />
+                    — Denzel Washington
+                </blockquote>
                 <p>
-                    Checkout my blog : <Link href="/blog">stylus</Link>
+                    Checkout my blog: <Link href="/blog">stylus</Link>
+                    {" "}
+                    (I write; sometimes...)
                 </p>
 				
                 <p>Feel free to contact me for any project ideas/discussion</p>
                 <p>
-                    Email me at :{" "}
-                    <a href="mailto:amazinglyskbiz@gmail.com">
-                        amazinglyskbiz@gmail.com
-                    </a>{" "}
-                    (That's my spam. I might not respond)
+                    Email me at:{" "}
+                    <a href="mailto:krish183@msu.edu">
+                        krish183@msu.edu
+                    </a>
                 </p>
             </div>
             <div className={styles.right_container}>
-                <img className={styles.pfp_image} src="/pfp.png" />
+                <img className={styles.pfp_image} src="/pfp.jpg" />
                 <div className={styles.link_container}>
                     <a href="https://github.com/amazinglySK" target={"_blank"}>
                         GITHUB

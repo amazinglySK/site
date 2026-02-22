@@ -1,6 +1,6 @@
 .blob {
     background-color: white;
-    height: 15vmax;
+    height: 12vmax;
     aspect-ratio: 1;
     position: fixed;
     left: 50%;
@@ -8,7 +8,7 @@
     translate: -50% -50%;
     border-radius: 50%;
     background: linear-gradient(to right, aquamarine, mediumpurple);
-    animation: rotate 15s infinite;
+    animation: rotate 10s infinite;
     opacity: 0.8;
 }
 
